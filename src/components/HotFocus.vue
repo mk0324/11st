@@ -13,6 +13,8 @@
               v-for="product in products"
               :key="product.name"
               class="swiper-slide">
+              <product-card
+                :product="product"></product-card>
             </div>
           </div>
         </div>
@@ -26,7 +28,11 @@
 <script>
 import Swiper from 'swiper/bundle'
 import 'swiper/swiper-bundle.css'
+import ProductCard from '~/src/components/ProductCard'
 export default {
+  components: {
+    ProductCard
+  },
   data () {
     return {
       products: []
