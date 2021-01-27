@@ -6,6 +6,7 @@
     <direct></direct>
     <hot-focus></hot-focus>
     <global-banner></global-banner>
+    <time-deal></time-deal>
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import Billboard from "./components/Billboard";
 import Direct from "./components/Direct";
 import HotFocus from "./components/HotFocus";
 import GlobalBanner from "./components/GlobalBanner";
+import TimeDeal from "./components/TimeDeal";
 export default {
   components: {
     LNB,
@@ -23,6 +25,7 @@ export default {
     Billboard,
     Direct,
     HotFocus,
+    TimeDeal,
     GlobalBanner
   }
 }
