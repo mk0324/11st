@@ -34,6 +34,9 @@
               </div>
             </div>
           </div>
+          <div
+            class="open-more"
+            @click="toggleRankingWrap"></div>
         </div>
       </div>
     </header>
@@ -51,7 +54,8 @@ export default {
   data () {
     return {
       searchText: '',
-      rankings: {}
+      rankings: {},
+      isShowRankingWrap: false,
     }
   },
   mounted() {
@@ -87,6 +91,9 @@ export default {
         searchText: this.searchText
       })
       console.log(res)
+    },
+    toggleRankingWrap () {
+      this.isShowRankingWrap = !this.isShowRankingWrap
     }
   }
 }
