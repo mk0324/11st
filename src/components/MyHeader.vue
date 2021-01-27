@@ -37,6 +37,19 @@
           <div
             class="open-more"
             @click="toggleRankingWrap"></div>
+          <div
+            v-if="isShowRankingWrap"
+            class="ranking-wrap">
+            <div class="title">
+              <h3>실시간 쇼핑 검색어</h3>
+              <div class="time">
+                {{ referenceDate }} 기준
+              </div>
+              <div
+                class="close-wrap"
+                @click="toggleRankingWrap"></div>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -45,6 +58,7 @@
 
 <script>
 import _throttle from 'lodash/throttle'
+import dayjs from 'dayjs'
 // import Swiper JS
 import Swiper from 'swiper/bundle';
 // import Swiper styles
@@ -57,6 +71,11 @@ export default {
       rankings: {},
       isShowRankingWrap: false,
     }
+  },
+  computed: {
+    referenceDate () {
+      return dayjs(this.rankings.referenceDate).format('YYYY.MM.DD HH:mm')
+    },
   },
   mounted() {
     this.init()
