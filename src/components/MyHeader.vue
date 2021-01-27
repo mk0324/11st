@@ -49,6 +49,34 @@
                 class="close-wrap"
                 @click="toggleRankingWrap"></div>
             </div>
+            <div class="tabs">
+              <div
+                :class="{ active: !tabIndex }"
+                class="tab"
+                @click="tabIndex = 0">
+                1~10위
+              </div>
+              <div
+                :class="{ active: tabIndex }"
+                class="tab"
+                @click="tabIndex = 1">
+                11~20위
+              </div>
+            </div>
+            <ul class="list">
+              <li
+                v-for="(rank, index) in filteredRankings"
+                :key="rank.name">
+                <a :href="rank.href">
+                  <span class="index">{{ index + 1 }}</span>
+                  <span class="name">{{ rank.name }}</span>
+                  <span class="relative-name">{{ rank.relativeName }}</span>
+                </a>
+                <div
+                  :class="rank.status"
+                  class="icon"></div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -70,12 +98,20 @@ export default {
       searchText: '',
       rankings: {},
       isShowRankingWrap: false,
+      tabIndex: 0,
     }
   },
   computed: {
     referenceDate () {
       return dayjs(this.rankings.referenceDate).format('YYYY.MM.DD HH:mm')
     },
+    filteredRankings () {
+      return this.rankings.rankings.filter((rank, index) => {
+        const start = this.tabIndex * 10
+        const end = start + 9
+        return start <= index && index <= end
+      })
+    }
   },
   mounted() {
     this.init()
