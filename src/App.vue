@@ -1,6 +1,7 @@
 <template>
   <div>
     <l-n-b></l-n-b>
+    <r-n-b></r-n-b>
     <my-header></my-header>
     <billboard></billboard>
     <direct></direct>
@@ -12,6 +13,7 @@
 
 <script>
 import LNB from "./components/LNB";
+import RNB from "./components/RNB";
 import MyHeader from "./components/MyHeader";
 import Billboard from "./components/Billboard";
 import Direct from "./components/Direct";
@@ -21,6 +23,7 @@ import TimeDeal from "./components/TimeDeal";
 export default {
   components: {
     LNB,
+    RNB,
     MyHeader,
     Billboard,
     Direct,
