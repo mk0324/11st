@@ -78,7 +78,7 @@ export default {
      }
      .swiper-outer {
        position: relative;
-       .prev
+       .prev,
        .next {
          position: absolute;
          top: 50%;
