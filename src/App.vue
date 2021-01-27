@@ -5,6 +5,7 @@
     <billboard></billboard>
     <direct></direct>
     <hot-focus></hot-focus>
+    <global-banner></global-banner>
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import MyHeader from "./components/MyHeader";
 import Billboard from "./components/Billboard";
 import Direct from "./components/Direct";
 import HotFocus from "./components/HotFocus";
+import GlobalBanner from "./components/GlobalBanne";
 export default {
   components: {
     LNB,
@@ -21,6 +23,7 @@ export default {
     Billboard,
     Direct,
     HotFocus,
+    GlobalBanner
   }
 }
 </script>
