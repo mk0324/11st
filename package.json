@@ -28,6 +28,7 @@
     "dayjs": "^1.10.4",
     "numeral": "^2.0.6",
     "regenerator-runtime": "^0.13.7",
+    "scroll-to": "0.0.2",
     "swiper": "^6.4.8",
     "vue": "^2.6.12",
     "vue-hot-reload-api": "^2.3.4",

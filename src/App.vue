@@ -15,7 +15,7 @@ import MyHeader from "./components/MyHeader";
 import Billboard from "./components/Billboard";
 import Direct from "./components/Direct";
 import HotFocus from "./components/HotFocus";
-import GlobalBanner from "./components/GlobalBanne";
+import GlobalBanner from "./components/GlobalBanner";
 export default {
   components: {
     LNB,
