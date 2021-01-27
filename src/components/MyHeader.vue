@@ -106,6 +106,34 @@
         </ul>
       </div>
     </header>
+    <div
+      :class="{ fixed: isFixed }"
+      class="utils">
+      <div class="inner">
+        <ul>
+          <li>
+            <a href="javascript:void(0)">베스트</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">쿠폰/혜택</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">기획전</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">오늘장보기</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">T공식대리점</a>
+          </li>
+          <li>
+            <a
+              class="shocking-deal"
+              href="javascript:void(0)"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -124,6 +152,7 @@ export default {
       rankings: {},
       isShowRankingWrap: false,
       tabIndex: 0,
+      isFixed: false,
       myMenu: [
         { name: '나의 쿠폰', href: 'javascript:void(0)' },
         { name: '주문/배송조회', href: 'javascript:void(0)' },
