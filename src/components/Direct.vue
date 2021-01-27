@@ -49,7 +49,7 @@ export default {
       })
     },
     onNav(name) {
-      this.$store.dispatch('navigation/onNav')
+      this.$store.dispatch('navigation/onNav', name)
     }
   }
 }

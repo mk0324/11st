@@ -1,10 +1,10 @@
 <template>
   <div>
-    <header>
+    <header :class="{ fixed: isFixed }">
       <div class="inner">
         <div
           class="open-nav-drawer"
-          @click="onNav"></div>
+          @click="onNav('LNB')"></div>
         <a
           href="javascript:void(0)"
           class="logo"></a>
@@ -101,7 +101,7 @@
           <li>
             <a
               href="javascript:void(0)"
-              @click="onNav"></a>
+              @click="onNav('RNB')"></a>
           </li>
         </ul>
       </div>
@@ -197,16 +197,15 @@ export default {
         })
       })
     },
-    onNav () {
-      this.$store.dispatch('navigation/onNav')
+    onNav (name) {
+      this.$store.dispatch('navigation/onNav', name)
     },
     async search () {
       if (!this.searchText.trim()) return
 
-      const res = await this.$search({
+      await this.$search({
         searchText: this.searchText
       })
-      console.log(res)
     },
     toggleRankingWrap () {
       this.isShowRankingWrap = !this.isShowRankingWrap
