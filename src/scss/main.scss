@@ -1,5 +1,16 @@
 .inner {
   width: 1240px;
   margin: 0 auto;
-
+  position: relative
+}
+section {
+  .inner {
+    padding: 50px 0;
+    box-sizing: border-box;
+  }
+  h2 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
 }
