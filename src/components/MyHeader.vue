@@ -79,6 +79,31 @@
             </ul>
           </div>
         </div>
+        <ul class="user-menu">
+          <li class="my">
+            <a href="javascript:void(0)"></a>
+            <ul class="my__menu">
+              <li
+                v-for="item in myMenu"
+                :key="item.name">
+                <a :href="item.href">
+                  {{ item.name }}
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="javascript:void(0)"></a>
+          </li>
+          <li>
+            <a href="javascript:void(0)"></a>
+          </li>
+          <li>
+            <a
+              href="javascript:void(0)"
+              @click="onNav"></a>
+          </li>
+        </ul>
       </div>
     </header>
   </div>
@@ -99,6 +124,13 @@ export default {
       rankings: {},
       isShowRankingWrap: false,
       tabIndex: 0,
+      myMenu: [
+        { name: '나의 쿠폰', href: 'javascript:void(0)' },
+        { name: '주문/배송조회', href: 'javascript:void(0)' },
+        { name: '취소/반품/교환', href: 'javascript:void(0)' },
+        { name: '고객센터', href: 'javascript:void(0)' },
+        { name: '회원정보', href: 'javascript:void(0)' }
+      ]
     }
   },
   computed: {
