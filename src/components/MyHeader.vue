@@ -203,9 +203,11 @@ export default {
     async search () {
       if (!this.searchText.trim()) return
 
-      await this.$search({
+      // 검색 결과를 응답 받아서 처리할 수 있도록 만들어 보면 좋을 듯해요~
+      const res = await this.$search({
         searchText: this.searchText
       })
+      console.log(res)
     },
     toggleRankingWrap () {
       this.isShowRankingWrap = !this.isShowRankingWrap

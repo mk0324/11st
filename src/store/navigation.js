@@ -7,7 +7,7 @@ export default {
   mutations: {
     updateState (state, payload) {
       Object.keys(payload).forEach(key => {
-        state[key] = payload[key];
+        state[key] = payload[key]
       })
     }
   },
