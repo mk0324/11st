@@ -43,7 +43,6 @@
   </div>
 </template>
 <script>
-import { mapActions } from 'vuex'
 import Swiper from 'swiper/bundle';
 // import Swiper styles
 import 'swiper/swiper-bundle.css'
@@ -62,9 +61,6 @@ export default {
     this.init()
   },
   methods: {
-    ...mapActions('fetchData', [
-      'fetchData'
-    ]),
     async init () {
       this.billboards = await this.$fetch({
         requestName: 'billboards'
@@ -118,9 +114,7 @@ export default {
 .billboard {
   transition: background-color 1s;
   .inner {
-    width: 1240px;
-    margin: 0 auto;
-    position: relative;
+    // 전역 선택자 스타일로 지정했어요~
     .swiper-container {
       width: 1240px;
       height: 400px;

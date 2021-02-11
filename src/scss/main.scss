@@ -1,7 +1,8 @@
 .inner {
   width: 1240px;
   margin: 0 auto;
-  position: relative
+  // 세미콜론이 누락되어 있네요~
+  position: relative;
 }
 section {
   .inner {
